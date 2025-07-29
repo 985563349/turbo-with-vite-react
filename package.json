@@ -1,0 +1,26 @@
+{
+  "name": "turbo-with-vite-react",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "simple-git-hooks": "^2.13.0",
+    "turbo": "^2.5.5"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=18"
+  }
+}
